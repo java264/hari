@@ -1,0 +1,78 @@
+:
+PROGRAM FOR CONVOLUTION 
+clc;
+close all;
+clear all;
+x=input('Enter the values of x');
+h=input('Enter the values of h');
+m=length(x);
+n=length(h);
+X=[x,zeros(1,n)]
+H=[h,zeros(1,m)]
+for i=1:m+n-1;
+    y(i)=0;
+    for j=1:m;
+        if(i-j+1>0);
+            y(i)=y(i)+x(j).*H(i-j+1);
+        else
+        end;
+    end;
+end;
+disp('convolution of sequence is');
+disp(y);
+stem(y);
+xlabel('--->n');
+ylabel('y(n)');
+title('convolution of two sequences without using builtin fuction');
+
+COMMAND WINDOW
+Enter the values of x[1 2 3]
+Enter the values of h[4 5 6]
+X =
+     1     2     3     0     0     0
+H =
+     4     5     6     0     0     0
+convolution of sequence is
+     4    13    28    27    18
+FIGURE WINDOW
+
+
+
+PROGRAM FOR CORRELATION
+clc;
+clear all;
+close all;
+x=input('enter the values of x');
+h=input('enter the values of h');
+n=length(x);
+m=length(h);
+k=n+m-1;
+x=[x,zeros(1,k-n)]'
+h=wrev(h);
+h=[h,zeros(1,k-m)]'
+for i=1:k;
+    c(:,i)=circshift(x,i-1);
+end;
+y=c*h;
+disp('correlation output of the sequence');
+disp(y');
+
+
+COMMAND WINDOW
+enter the values of x[1 2 3]
+enter the values of h[4 5 6]
+x =
+     1
+     2
+     3
+     0
+     0
+h =
+     6
+     5
+     4
+     0
+     0
+Correlation output of the sequence
+     6    17    32    23    12
+Result:
