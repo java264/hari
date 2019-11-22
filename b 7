@@ -1,0 +1,34 @@
+: - To write a MATLAB program to find power and energy of a given signal
+
+Apparatus Required:-PC with MATLAB 7.0
+PROGRAM:
+
+#include<stdio.h>
+main()
+{
+int N,i,energy=0,power=0,x[30];
+printf("Enter length of the sequence\n");
+scanf("%d",&N);
+printf("Enter inputs of the sequence\n");
+for(i=0;i<N;i++)
+{
+scanf("%d",&x[i]);
+energy=energy+x[i]*x[i];
+}
+power=energy/N;
+printf("\n Energy of the given sequence =%d",energy);
+printf("\n Power of the given sequence =%d",power);
+}
+
+
+Output
+Enter length of the sequence=3
+Enter inputs of the sequence= 1 2 3
+Energy of the given sequence = 14
+Power of the given sequence=4 
+				
+
+
+Result: calculated power and energy of a given sequence by using c-program
+
+
