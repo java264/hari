@@ -1,0 +1,32 @@
+clc;
+clear all;
+close all;
+N=input('Type the sesired length of the sequence:');
+n=0:N-1;
+rn=randn(1,N);
+avg_rn=mean(rn);
+disp('The mean value of the normally distributed random signal is');avg_rn
+ru=rand(1,N);
+avg_ru=mean(ru);
+disp('The mean value of the uniformly distributed random signal is');av
+g_ru
+subplot(2,1,1);
+plot(n,rn);
+grid
+title('normally distributed random signal');
+xlabel('Time index n (sec)');
+ylabel('Magnitude');
+subplot(2,1,2);
+plot(n,ru);
+grid
+title('uniformly distributed random signal');
+xlabel('Time index n (sec)');
+ylabel('Magnitude');
+
+
+
+
+OUTPUT:
+type the desired length of the sequences:   100
+The mean value of the normally distributed random signal
+avg_rn =   -0.1145
