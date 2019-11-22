@@ -1,0 +1,118 @@
+clc clear all;
+close all;
+N=3;
+x=ones(1,N);
+for i=1:N;
+    y(i)=(1/3)^i.*x(i);
+end;
+n=N;
+e=0;
+for i=1:n;
+    e=e+(y(i).*y(i));
+end;
+disp('The energy of continous time signal is');
+disp(e);
+COMMAND WINDOW
+The energy of continous time signal is
+    0.1248
+ENERGY OF A SEQUENCE
+PROGRAM
+clc;
+clear all;
+close all;
+x=[1 2 3 4];
+n=4;
+e=0;
+for i=1:n;
+    e=e+(x(i).*x(i));
+end;
+disp('The energy of a signal is');
+disp(e);
+
+COMMAND WINDOW
+
+The energy of a signal is
+    30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment No: 1		      		 					 Date: 
+
+POWER OF THE SIGNAL
+PROGRAM
+
+clc;
+clear all;
+close all;
+N=2;
+x=ones(1,N);
+for i=1:N;
+    y(i)=(1/3)^i.*x(i);
+end;
+n=N;
+e=0;
+for i=1:n;
+    e=e+(y(i).*y(i));
+end;
+p=e/(2*N+1);
+disp('The power of the signal is');
+disp(p);
+COMMAND WINDOW
+The power of the signal is
+    0.0247
+POWER FOR PERIODIC SIGNAL
+PROGRAM
+clc;
+clear all;
+close all;
+N=input('Type the value of N');
+t= -N:0.00001:N;
+x=cos(2*pi*50*t).^2;
+disp('The calculated power of the signal is');
+p=sum((abs(x).^2)/length(x));
+disp(p);
+plot(t,x);
+axis([0 0.1 0 1]);
+COMMAND WINDOW
+Type the value of N 5
+The calculated power of the signal is
+    0.3750
+
